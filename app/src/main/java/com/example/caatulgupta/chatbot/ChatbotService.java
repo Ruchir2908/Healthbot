@@ -16,19 +16,19 @@ public interface ChatbotService {
 //    @POST("diagnosis")
 //    Call<> ge
 
-
+    @Headers({"App-id: 5be77a36", "App-Key: 76e24b650eee585d24913756cfa58f32"})
     @GET("conditions")
     Call<ArrayList<Conditions>> getConditions();
 
-
+    @Headers({"App-id: 5be77a36", "App-Key: 76e24b650eee585d24913756cfa58f32"})
     @GET("conditions/{id}")
     Call<Conditions> getCondition(@Path("id") String id);
 
-
+    @Headers({"App-id: 5be77a36", "App-Key: 76e24b650eee585d24913756cfa58f32"})
     @POST("parse")
     Call<Parse> postMessageForReply(@Body RequestBody body);
 
-
+    @Headers({"App-id: 5be77a36", "App-Key: 76e24b650eee585d24913756cfa58f32"})
     @POST("diagnosis")
     Call<Diagnosis> postDiagnosis(@Body RequestBody body);
 
